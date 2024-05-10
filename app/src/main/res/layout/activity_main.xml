@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#56732A"
+    android:backgroundTint="#56732A"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvDegree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lilita_one_regular"
+        android:text="25 C"
+        android:textColor="#F1F6F1"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNameApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="21dp"
+        android:fontFamily="@font/lilita_one_regular"
+        android:text="We Seek"
+        android:textColor="#F1F6F1"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="459dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatusWaterLevel"
+        app:srcCompat="@drawable/container_rounded_corner" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="273dp"
+        android:layout_height="518dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="70dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvWaterLevel"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameApp"
+        app:srcCompat="@drawable/plant_picture" />
+
+    <TextView
+        android:id="@+id/tvWaterLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="1dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Water Level"
+        android:textColor="#F1F6F1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/progBarWaterLevel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatuesMoistLevel" />
+
+    <ProgressBar
+        android:id="@+id/progBarMoistLevel"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="2dp"
+        android:progressDrawable="@drawable/customize_progress_bar"
+        app:layout_constraintBottom_toTopOf="@+id/tvStatuesMoistLevel"
+        app:layout_constraintEnd_toEndOf="@+id/progBarWaterLevel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvMoistureLevel"
+        app:layout_constraintTop_toBottomOf="@+id/tvMoistureLevel"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvMoistureLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="64dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Moisture Level"
+        android:textColor="#F1F6F1"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/tvStatuesMoistLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="Has enough water."
+        android:textColor="#F1F6F1"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/tvMoistureLevel"
+        app:layout_constraintTop_toBottomOf="@+id/tvMoistureLevel" />
+
+    <TextView
+        android:id="@+id/tvStatusWaterLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="21dp"
+        android:text="Needs more water."
+        android:textColor="#F1F6F1"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/progBarWaterLevel"
+        app:layout_constraintTop_toBottomOf="@+id/tvWaterLevel" />
+
+    <ProgressBar
+        android:id="@+id/progBarWaterLevel"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:progressDrawable="@drawable/customize_progress_bar"
+        app:layout_constraintBottom_toTopOf="@+id/tvStatusWaterLevel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvWaterLevel"
+        app:layout_constraintTop_toBottomOf="@+id/tvWaterLevel" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="3dp"
+        android:layout_height="130dp"
+        android:background="#C4BD50"
+        android:backgroundTint="#C4BD50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.607"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvTagLine"
+        android:layout_width="122dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="292dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="A happy plant is a happy life!"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintStart_toStartOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.99" />
+
+    <TextView
+        android:id="@+id/tvScheduleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="SCHEDULE"
+        android:textColor="#F89800"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvSchedule"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.766" />
+
+    <TextView
+        android:id="@+id/tvSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Next watering is in 30 mins!"
+        android:textColor="#0E0E0E"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnWaterPlant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnWaterPlant"
+        android:layout_width="362dp"
+        android:layout_height="73dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/bg"
+        android:backgroundTint="#56732A"
+        android:fontFamily="@font/poppins_regular"
+        android:text="WATER PLANT"
+        android:textColor="#F1F6F1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
