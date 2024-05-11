@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         btnWater.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 dialog.show();
             }
         });
