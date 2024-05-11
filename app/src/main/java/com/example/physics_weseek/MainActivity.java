@@ -13,11 +13,14 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 public class MainActivity extends AppCompatActivity {
 
     ProgressBar moistProgress;
     ProgressBar waterProgress;
-    Button btnwater;
+    Button btnWater;
     Dialog dialog;
 
     @Override
@@ -52,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         TextView no = dialog.findViewById(R.id.tvNo);
 
         yes.setOnClickListener(view -> {
+            waterPlant();
             Toast.makeText(MainActivity.this, "OKAY", Toast.LENGTH_SHORT).show();
             dialog.dismiss();
         });
@@ -62,12 +66,32 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupButtonClick() {
-        btnwater = findViewById(R.id.btnWaterPlant);
-        btnwater.setOnClickListener(new View.OnClickListener() {
+        btnWater = findViewById(R.id.btnWaterPlant);
+        btnWater.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dialog.show();
             }
         });
+    }
+    private void waterPlant() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    URL url = new URL("http://ESP_IP_ADDRESS/water_plant");
+                    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                    conn.setRequestMethod("POST");
+                    conn.connect();
+
+                    // InputStream in = conn.getInputStream(); -> read response if needed
+
+
+                    conn.disconnect();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 }
