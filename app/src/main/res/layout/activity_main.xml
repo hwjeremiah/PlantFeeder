@@ -9,19 +9,6 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tvDegree"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/lilita_one_regular"
-        android:text="25 C"
-        android:textColor="#F1F6F1"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/tvNameApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -104,7 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
-        android:text="Has enough water."
+        android:text="Does not have enough water."
         android:textColor="#F1F6F1"
         android:textSize="10sp"
         android:textStyle="italic"
@@ -156,18 +143,17 @@
         android:id="@+id/tvTagLine"
         android:layout_width="122dp"
         android:layout_height="54dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="292dp"
+        android:layout_marginBottom="304dp"
         android:fontFamily="@font/poppins_regular"
         android:text="A happy plant is a happy life!"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="@+id/divider"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.99" />
+        app:layout_constraintTop_toTopOf="@+id/divider"
+        app:layout_constraintVertical_bias="0.574" />
 
     <TextView
         android:id="@+id/tvScheduleLabel"
@@ -191,12 +177,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="Next watering is in 30 mins!"
+        android:text="Watering Plant at 7:30 AM and 10:30 PM"
         android:textColor="#0E0E0E"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/btnWaterPlant"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintHorizontal_bias="0.228"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
