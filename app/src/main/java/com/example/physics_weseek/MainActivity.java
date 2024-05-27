@@ -203,15 +203,20 @@ public class MainActivity extends AppCompatActivity {
                                 moistProgress.setProgress(determineMoistureLevel(soilMoisture));
                                 waterProgress.setProgress(determineWaterLevel(waterLevel));
 
-                                if (determineWaterLevel(waterLevel)>40){
+                                if (determineWaterLevel(waterLevel)>0 && determineWaterLevel(waterLevel)<=30){
+                                    txtWaterLevel.setText("There is little to no water");
+                                }else if(determineWaterLevel(waterLevel)>30 && determineWaterLevel(waterLevel)<=60){
+                                    txtWaterLevel.setText("There is some water");
+                                }else{
                                     txtWaterLevel.setText("There is enough water");
-                                }else{
-                                    txtWaterLevel.setText("Needs more water");
                                 }
-                                if (determineMoistureLevel(soilMoisture)>40){
-                                    txtMoistureLevel.setText("Has Enough Water");
+
+                                if (determineMoistureLevel(soilMoisture)>0 && determineMoistureLevel(soilMoisture)<=30){
+                                    txtMoistureLevel.setText("There is little to no moisture");
+                                }else if(determineMoistureLevel(soilMoisture)>30 && determineMoistureLevel(soilMoisture)<=60){
+                                    txtMoistureLevel.setText("There is some moisture");
                                 }else{
-                                    txtMoistureLevel.setText("Does not have enough water");
+                                    txtMoistureLevel.setText("There is enough moisture");
                                 }
                             }
                         });
@@ -312,16 +317,16 @@ public class MainActivity extends AppCompatActivity {
         int total = 0;
 
         if(moistureLevelVal == 1020) total += 0;
-        if(moistureLevelVal <= 958) total += 10;
-        if(moistureLevelVal <= 896) total += 10;
-        if(moistureLevelVal <= 834) total += 10;
-        if(moistureLevelVal <= 772) total += 10;
-        if(moistureLevelVal <= 710) total += 10;
-        if(moistureLevelVal <= 648) total += 10;
-        if(moistureLevelVal <= 586) total += 10;
-        if(moistureLevelVal <= 524) total += 10;
-        if(moistureLevelVal <= 462) total += 10;
-        if(moistureLevelVal <= 400) total += 10;
+        if(moistureLevelVal <= 938) total += 10;
+        if(moistureLevelVal <= 856) total += 10;
+        if(moistureLevelVal <= 774) total += 10;
+        if(moistureLevelVal <= 692) total += 10;
+        if(moistureLevelVal <= 610) total += 10;
+        if(moistureLevelVal <= 528) total += 10;
+        if(moistureLevelVal <= 446) total += 10;
+        if(moistureLevelVal <= 364) total += 10;
+        if(moistureLevelVal <= 282) total += 10;
+        if(moistureLevelVal <= 230) total += 10;
 
         return total;
     }
